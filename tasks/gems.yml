@@ -1,7 +1,7 @@
 ---
 
 - name: install gems
-  command: gem install --quiet {{ item }}
+  command: /usr/local/bin/gem install --quiet {{ item }}
   with_items:
     - bundler
   become: yes
