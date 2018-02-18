@@ -12,7 +12,7 @@ addons:
     - python-setuptools
 
 before_install:
-  - rvm implode
+  - rvm implode --force
 
 install:
   - sudo -H easy_install pip
