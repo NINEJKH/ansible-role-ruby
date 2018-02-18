@@ -12,16 +12,14 @@ addons:
     - python-setuptools
 
 env:
-  - PATH=/home/travis/bin:/home/travis/.local/bin:/opt/pyenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin
+  - PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin
 
 before_install:
-  - rvm implode --force
+  - sudo rvm implode --force
+
+  - ls -la ~
 
   - rm ~/.rvmrc
-
-  - ls -la /home/travis/bin
-
-  - ls -la /home/travis/.local/bin
 
 install:
   - sudo -H easy_install pip
