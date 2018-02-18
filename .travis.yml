@@ -18,11 +18,11 @@ before_install:
 
   - rm ~/.rvmrc
 
-  - grep -i -r -n -e 'rvm' ~/.bash_profile
+  - grep -i -r -n -e 'rvm' ~/.bash_profile || true
 
-  - grep -i -r -n -e 'rvm' ~/.bash_profile.d/
+  - grep -i -r -n -e 'rvm' ~/.bash_profile.d/ || true
   
-  - grep -i -r -n -e 'rvm' ~/.profile
+  - grep -i -r -n -e 'rvm' ~/.profile || true
 
 install:
   - sudo -H easy_install pip
