@@ -11,6 +11,9 @@ addons:
     packages:
     - python-setuptools
 
+before_install:
+  - rvm implode
+
 install:
   - sudo -H easy_install pip
   # http://urllib3.readthedocs.io/en/latest/user-guide.html#ssl-py2
