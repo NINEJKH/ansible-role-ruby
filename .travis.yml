@@ -11,18 +11,13 @@ addons:
     packages:
     - python-setuptools
 
+env:
+  - PATH=/home/travis/virtualenv/python2.7.14/bin:/home/travis/bin:/home/travis/.local/bin:/opt/pyenv/shims:/home/travis/.phpenv/shims:/home/travis/perl5/perlbrew/bin:/home/travis/.nvm/versions/node/v8.9.1/bin:/home/travis/.kiex/elixirs/elixir-1.4.5/bin:/home/travis/.kiex/bin
+
 before_install:
   - rvm implode --force
 
   - rm ~/.rvmrc
-
-  - grep -i -r -n -e 'rvm' ~/.bash_profile || true
-
-  - grep -i -r -n -e 'rvm' ~/.bash_profile.d/ || true
-
-  - sed '/rvm/d' ~/.profile
-
-  - grep -i -r -n -e 'rvm' ~/.profile || true
 
   - echo $PATH
 
