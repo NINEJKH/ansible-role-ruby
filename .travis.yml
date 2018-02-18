@@ -38,18 +38,6 @@ script:
 
   - /usr/local/bin/ruby --version
 
-  - ls -lh /usr/local/bin
-
-  - ls -la ~
-
-  - echo $GEM_HOME
-
-  - which gem
-
-  - which bundle
-
-  - bundle --version
-
   - /usr/local/bin/bundle --version
 
 notifications:
