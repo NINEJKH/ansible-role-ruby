@@ -11,15 +11,8 @@ addons:
     packages:
     - python-setuptools
 
-#env:
-#  - PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin
-
-before_install:
-  - sudo rvm implode --force
-
-  - ls -la ~
-
-  - rm ~/.rvmrc
+env:
+  - PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin
 
 install:
   - sudo -H easy_install pip
