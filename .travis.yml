@@ -42,6 +42,10 @@ script:
 
   - ls -la ~
 
+  - echo $GEM_HOME
+
+  - which gem
+
   - which bundle
 
   - bundle --version
