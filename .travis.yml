@@ -14,7 +14,15 @@ addons:
 before_install:
   - rvm implode --force
 
-  - rm -rf ~/.rvm
+  - sudo rm -rf /home/travis/.rvm
+
+  - rm ~/.rvmrc
+
+  - grep -i -r -n -e 'rvm' ~/.bash_profile
+
+  - grep -i -r -n -e 'rvm' ~/.bash_profile.d/
+  
+  - grep -i -r -n -e 'rvm' ~/.profile
 
 install:
   - sudo -H easy_install pip
