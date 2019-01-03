@@ -38,6 +38,8 @@ script:
 
   - /usr/local/bin/ruby --version
 
+  - /usr/local/bin/gem --version
+
   - /usr/local/bin/bundle --version
 
 notifications:
