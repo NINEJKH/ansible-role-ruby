@@ -1,5 +1,9 @@
 ---
 
+- name: update gem
+  command: gem update --system
+  become: yes
+
 - name: install gems
   command: gem install --no-user-install --quiet --bindir /usr/local/bin {{ item }}
   with_items:
