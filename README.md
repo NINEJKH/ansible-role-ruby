@@ -11,7 +11,7 @@ none
 ## Role Variables
 
 ```yaml
-ruby_version: 2.3.6
+ruby_version: 2.3.8
 ```
 
 ## Dependencies
