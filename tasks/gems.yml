@@ -1,11 +1,12 @@
 ---
 
-- name: update gem
-  command: gem update --system
-  become: yes
+#- name: update gem
+#  command: gem update --system
+#  become: yes
 
 - name: install gems
-  command: gem install --no-user-install --quiet --bindir /usr/local/bin {{ item }}
+  command: gem install --no-user-install --quiet --bindir /usr/local/bin {{ item.name }} -v {{ item.version }}
   with_items:
-    - bundler
+    - name: bundler
+      version: 1.17.3
   become: yes
